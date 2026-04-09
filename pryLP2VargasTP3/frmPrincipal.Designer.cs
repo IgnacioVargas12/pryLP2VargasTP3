@@ -47,6 +47,7 @@
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDeuda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnListarDeudores = new System.Windows.Forms.Button();
             this.gpbDatos.SuspendLayout();
             this.gpbConsultaDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -152,6 +153,7 @@
             // 
             // gpbConsultaDatos
             // 
+            this.gpbConsultaDatos.Controls.Add(this.btnListarDeudores);
             this.gpbConsultaDatos.Controls.Add(this.btnListar);
             this.gpbConsultaDatos.Controls.Add(this.lblTotalDeuda);
             this.gpbConsultaDatos.Controls.Add(this.lblDeuda2);
@@ -211,21 +213,35 @@
             // 
             this.colCodigo.HeaderText = "Código";
             this.colCodigo.Name = "colCodigo";
+            this.colCodigo.ReadOnly = true;
             // 
             // colUsuario
             // 
             this.colUsuario.HeaderText = "Usuario";
             this.colUsuario.Name = "colUsuario";
+            this.colUsuario.ReadOnly = true;
             // 
             // colDeuda
             // 
             this.colDeuda.HeaderText = "Deuda";
             this.colDeuda.Name = "colDeuda";
+            this.colDeuda.ReadOnly = true;
             // 
             // colLimite
             // 
             this.colLimite.HeaderText = "Límite de crédito";
             this.colLimite.Name = "colLimite";
+            this.colLimite.ReadOnly = true;
+            // 
+            // btnListarDeudores
+            // 
+            this.btnListarDeudores.Location = new System.Drawing.Point(229, 347);
+            this.btnListarDeudores.Name = "btnListarDeudores";
+            this.btnListarDeudores.Size = new System.Drawing.Size(117, 24);
+            this.btnListarDeudores.TabIndex = 5;
+            this.btnListarDeudores.Text = "Listar deudores";
+            this.btnListarDeudores.UseVisualStyleBackColor = true;
+            this.btnListarDeudores.Click += new System.EventHandler(this.btnListarDeudores_Click);
             // 
             // frmPrincipal
             // 
@@ -238,6 +254,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de clientes";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.gpbDatos.ResumeLayout(false);
             this.gpbDatos.PerformLayout();
             this.gpbConsultaDatos.ResumeLayout(false);
@@ -268,6 +285,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDeuda;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLimite;
+        private System.Windows.Forms.Button btnListarDeudores;
     }
 }
 
