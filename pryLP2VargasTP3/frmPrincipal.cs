@@ -115,28 +115,10 @@ namespace pryLP2VargasTP3
             Validar();
         }
 
-        private void PreCarga() 
-        {
-            clsVector.vecClientes[clsVector.IND].CampoCodigo = 10;
-            clsVector.vecClientes[clsVector.IND].CampoUsuario = "Ana";
-            clsVector.vecClientes[clsVector.IND].CampoDeuda = 500;
-            clsVector.vecClientes[clsVector.IND].CampoLimite = 10000;
-            clsVector.IND++;
-            clsVector.vecClientes[clsVector.IND].CampoCodigo = 20;
-            clsVector.vecClientes[clsVector.    IND].CampoUsuario = "Diego";
-            clsVector.vecClientes[clsVector.IND].CampoDeuda = 0;
-            clsVector.vecClientes[clsVector.IND].CampoLimite = 20000;
-            clsVector.IND++;
-            clsVector.vecClientes[clsVector.IND].CampoCodigo = 30;
-            clsVector.vecClientes[clsVector.IND].CampoUsuario = "Maria";
-            clsVector.vecClientes[clsVector.IND].CampoDeuda = 3000;
-            clsVector.vecClientes[clsVector.IND].CampoLimite = 30000;
-            clsVector.IND++;
-        }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            PreCarga();
+            clsVector.Precarga();
         }
 
         private void btnListarDeudores_Click(object sender, EventArgs e)
@@ -155,6 +137,11 @@ namespace pryLP2VargasTP3
                 }
             }
             lblTotalDeuda.Text = "$" + TotalDeuda.ToString();
+        }
+
+        private void gpbConsultaDatos_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
