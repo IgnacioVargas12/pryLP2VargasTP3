@@ -31,12 +31,21 @@ namespace pryLP2VargasTP3
 
         private void listadoDeTodosLosClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form formulario = new frmListadoClientes();
+            formulario.MdiParent = this;
+            formulario.Show();
         }
 
         private void listadoDeClientesOrdenadorPorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formulario = new frmListadoOrdenado();
+            formulario.MdiParent = this;
+            formulario.Show();
+        }
+
+        private void listadoDeClientesDeudoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmListarDeudores();
             formulario.MdiParent = this;
             formulario.Show();
         }

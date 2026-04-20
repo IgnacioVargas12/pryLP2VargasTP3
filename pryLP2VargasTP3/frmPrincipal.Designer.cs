@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 591);
+            this.ClientSize = new System.Drawing.Size(531, 588);
             this.Controls.Add(this.gpbConsultaDatos);
             this.Controls.Add(this.gpbDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

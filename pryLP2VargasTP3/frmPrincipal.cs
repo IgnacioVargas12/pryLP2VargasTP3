@@ -118,7 +118,7 @@ namespace pryLP2VargasTP3
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            clsVector.Precarga();
+            
         }
 
         private void btnListarDeudores_Click(object sender, EventArgs e)
