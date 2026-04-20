@@ -60,11 +60,8 @@ namespace pryLP2VargasTP3
         {
             txtCodigo.Text = "";
             txtDeuda.Text = "";
-            txtDeuda.Enabled = false;
             txtLimite.Text = "";
-            txtLimite.Enabled = false;
             txtUsuario.Text = "";
-            txtUsuario.Enabled = false;
         }
 
 

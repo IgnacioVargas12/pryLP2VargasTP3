@@ -34,7 +34,7 @@ namespace pryLP2VargasTP3
             }
             lblTotalDeuda.Text = "$" + TotalDeuda.ToString();
             lblTotalClientes.Text = Convert.ToString(clsVector.IND);
-            PromedioDeuda = TotalDeuda / clsVector.IND;
+            PromedioDeuda = Math.Round(TotalDeuda / clsVector.IND , 2); //Redondea p/tener 2 decimales
             lblPromedioDeuda.Text = "$" + Convert.ToString(PromedioDeuda);
         }
     }

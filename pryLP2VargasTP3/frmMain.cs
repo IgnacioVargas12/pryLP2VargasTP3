@@ -49,5 +49,12 @@ namespace pryLP2VargasTP3
             formulario.MdiParent = this;
             formulario.Show();
         }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmAcercaDe();
+            formulario.MdiParent = this;
+            formulario.Show();
+        }
     }
 }

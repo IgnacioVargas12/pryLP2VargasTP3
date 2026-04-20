@@ -25,30 +25,34 @@ namespace pryLP2VargasTP3
         static public Int32 IND = 0;
 
         //Metodo de precarga
-        
+        public static bool yaCargado = false;
 
         static public void Precarga()
         {
-            vecClientes[IND].CampoCodigo = 10;
-            vecClientes[IND].CampoUsuario = "Ana";
-            vecClientes[IND].CampoDeuda = 500;
-            vecClientes[IND].CampoLimite = 10000;
-            IND++;
-            vecClientes[IND].CampoCodigo = 60;
-            vecClientes[IND].CampoUsuario = "Diego";
-            vecClientes[IND].CampoDeuda = 0;
-            vecClientes[IND].CampoLimite = 20000;
-            IND++;
-            vecClientes[IND].CampoCodigo = 30;
-            vecClientes[IND].CampoUsuario = "Maria";
-            vecClientes[IND].CampoDeuda = 3000;
-            vecClientes[IND].CampoLimite = 30000;
-            IND++;
-            vecClientes[IND].CampoCodigo = 50;
-            vecClientes[IND].CampoUsuario = "Pedro";
-            vecClientes[IND].CampoDeuda = 2000;
-            vecClientes[IND].CampoLimite = 50000;
-            IND++;
+            if (!yaCargado)
+            {
+                vecClientes[IND].CampoCodigo = 10;
+                vecClientes[IND].CampoUsuario = "Ana";
+                vecClientes[IND].CampoDeuda = 500;
+                vecClientes[IND].CampoLimite = 10000;
+                IND++;
+                vecClientes[IND].CampoCodigo = 60;
+                vecClientes[IND].CampoUsuario = "Diego";
+                vecClientes[IND].CampoDeuda = 0;
+                vecClientes[IND].CampoLimite = 20000;
+                IND++;
+                vecClientes[IND].CampoCodigo = 30;
+                vecClientes[IND].CampoUsuario = "Maria";
+                vecClientes[IND].CampoDeuda = 3000;
+                vecClientes[IND].CampoLimite = 30000;
+                IND++;
+                vecClientes[IND].CampoCodigo = 50;
+                vecClientes[IND].CampoUsuario = "Pedro";
+                vecClientes[IND].CampoDeuda = 2000;
+                vecClientes[IND].CampoLimite = 50000;
+                IND++;
+                yaCargado = true;
+            }
         }
 
         static public void OrdenarCodigoAscendente() 
