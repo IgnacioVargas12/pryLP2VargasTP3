@@ -25,6 +25,8 @@ namespace pryLP2VargasTP3
         static public Int32 IND = 0;
 
         //Metodo de precarga
+        
+
         static public void Precarga()
         {
             vecClientes[IND].CampoCodigo = 10;

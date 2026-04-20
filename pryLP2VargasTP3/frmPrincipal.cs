@@ -67,20 +67,6 @@ namespace pryLP2VargasTP3
             txtUsuario.Enabled = false;
         }
 
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            dgvClientes.Rows.Clear();
-            Decimal TotalDeuda = 0;
-            for (Int32 i = 0; i < clsVector.IND; i++)
-            {
-                dgvClientes.Rows.Add(clsVector.vecClientes[i].CampoCodigo,
-                    clsVector.vecClientes[i].CampoUsuario,
-                    clsVector.vecClientes[i].CampoDeuda,
-                    clsVector.vecClientes[i].CampoLimite);
-                TotalDeuda = TotalDeuda + clsVector.vecClientes[i].CampoDeuda;
-            }
-            lblTotalDeuda.Text = "$" + TotalDeuda.ToString();
-        }
 
         private void Validar() 
         {
@@ -121,23 +107,6 @@ namespace pryLP2VargasTP3
             
         }
 
-        private void btnListarDeudores_Click(object sender, EventArgs e)
-        {
-            dgvClientes.Rows.Clear();
-            Decimal TotalDeuda = 0;
-            for (Int32 i = 0; i < clsVector.IND; i++)
-            {
-                if (clsVector.vecClientes[i].CampoDeuda > 0)
-                {
-                    dgvClientes.Rows.Add(clsVector.vecClientes[i].CampoCodigo,
-                    clsVector.vecClientes[i].CampoUsuario,
-                    clsVector.vecClientes[i].CampoDeuda,
-                    clsVector.vecClientes[i].CampoLimite);
-                    TotalDeuda = TotalDeuda + clsVector.vecClientes[i].CampoDeuda;
-                }
-            }
-            lblTotalDeuda.Text = "$" + TotalDeuda.ToString();
-        }
 
         private void gpbConsultaDatos_Enter(object sender, EventArgs e)
         {
